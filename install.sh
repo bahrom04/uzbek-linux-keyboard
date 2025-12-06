@@ -1,10 +1,14 @@
 #!/bin/bash
 
+# Get absolute path of the install script
+SCRIPT_PATH=$(readlink -f "$0")
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+
 # Define the custom layout name and description
 LAYOUT_NAME="uz"
 DESCRIPTION="Uzbek"
-SYMBOLS_FILE="uz"
-PATCH_FILE="evdev_patch.patch"
+SYMBOLS_FILE="$SCRIPT_DIR/uz"
+PATCH_FILE="$SCRIPT_DIR/evdev_patch.patch"
 
 # Define the paths
 SYMBOLS_DIR="/usr/share/X11/xkb/symbols/"
