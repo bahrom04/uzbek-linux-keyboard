@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.uzbek-keyboard;
+  cfg = config.services.xserver.xkb.uzbek-enhanced;
 in {
-  options.uzbek-keyboard = {
+  options.services.xserver.xkb.uzbek-enhanced = {
     enable = mkEnableOption "Enhanced uzbek keyboard layout";
 
     layout = mkOption {
