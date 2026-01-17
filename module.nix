@@ -5,9 +5,9 @@
   ...
 }:
 with lib; let
-  cfg = config.services.xserver.xkb.uzbek-enhanced;
+  cfg = config.services.xserver.xkb.uz-enhanced;
 in {
-  options.services.xserver.xkb.uzbek-enhanced = {
+  options.services.xserver.xkb.uz-enhanced = {
     enable = mkEnableOption "Enhanced uzbek keyboard layout";
 
     layout = mkOption {
@@ -23,6 +23,7 @@ in {
         description = "Uzbek (Enhanced)";
         languages = ["uzb"];
         symbolsFile = ./uz;
+        variants = ["us" "2023" "cyrillic"];
       };
     };
 
