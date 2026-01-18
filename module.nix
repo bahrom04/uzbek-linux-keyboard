@@ -18,30 +18,32 @@ in {
   };
 
   config = mkIf cfg.enable {
-    services.xserver.xkb.extraLayouts = {
-      uz = {
-        description = "Uzbek (Latin)";
-        languages = ["uzb" "eng"];
-        symbolsFile = ./uz;
-      };
-      uz-enhanced-us = {
-        description = "Uzbek (Enhanced, US)";
-        languages = ["uzb"];
-        symbolsFile = ./uz_us;
-      };
-      uz-enhanced-2023 = {
-        description = "Uzbek (Enhanced, 2023)";
-        languages = ["uzb"];
-        symbolsFile = ./uz_2023;
-      };
-      uz-enhanced-cyrillic = {
-        description = "Uzbek (Enhanced, Cyrillic)";
-        languages = ["uzb"];
-        symbolsFile = ./uz_cyrillic;
+    services.xserver.xkb = {
+      layout = "uz,us";
+      variant = "latin";
+
+      extraLayouts = {
+        uz = {
+          description = "Uzbek (Latin)";
+          languages = ["uzb" "eng"];
+          symbolsFile = ./uz;
+        };
+        uz-enhanced-us = {
+          description = "Uzbek (Enhanced, US)";
+          languages = ["uzb"];
+          symbolsFile = ./uz_us;
+        };
+        uz-enhanced-2023 = {
+          description = "Uzbek (Enhanced, 2023)";
+          languages = ["uzb"];
+          symbolsFile = ./uz_2023;
+        };
+        uz-enhanced-cyrillic = {
+          description = "Uzbek (Enhanced, Cyrillic)";
+          languages = ["uzb"];
+          symbolsFile = ./uz_cyrillic;
+        };
       };
     };
-    layout = "uz,us";
-    variant = "latin";
-
   };
 }
