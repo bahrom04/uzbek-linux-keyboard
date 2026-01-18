@@ -39,9 +39,9 @@ in {
         languages = ["uzb"];
         symbolsFile = ./uz_cyrillic;
       };
-      layout = cfg.layout;
-      variant = "latin";
     };
+    layout = cfg.layout;
+    variant = "latin";
 
   };
 }
