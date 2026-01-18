@@ -19,14 +19,14 @@ in {
 
   config = mkIf cfg.enable {
     services.xserver.xkb = {
-      layout = "uz,us";
+      layout = cfg.layout;
       variant = "latin";
 
       extraLayouts = {
         uz = {
           description = "Uzbek (Latin)";
           languages = ["uzb" "eng"];
-          symbolsFile = ./uz;
+          symbolsFile = ./uz_latin;
         };
         uz-enhanced-us = {
           description = "Uzbek (Enhanced, US)";
