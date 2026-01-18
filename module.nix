@@ -23,7 +23,21 @@ in {
         description = "Uzbek (Enhanced)";
         languages = ["uzb"];
         symbolsFile = ./uz;
-        variants = ["us" "2023" "cyrillic"];
+      };
+      uz-enhanced-us = {
+        description = "Uzbek (Enhanced, US)";
+        languages = ["uzb"];
+        symbolsFile = ./uz_us;
+      };
+      uz-enhanced-2023 = {
+        description = "Uzbek (Enhanced, 2023)";
+        languages = ["uzb"];
+        symbolsFile = ./uz_2023;
+      };
+      uz-enhanced-cyrillic = {
+        description = "Uzbek (Enhanced, Cyrillic)";
+        languages = ["uzb"];
+        symbolsFile = ./uz_cyrillic;
       };
     };
 
