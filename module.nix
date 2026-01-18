@@ -12,16 +12,16 @@ in {
 
     layout = mkOption {
       type = types.str;
-      default = "uz-enhanced,us";
+      default = "uz,us";
       description = "Uzbek (Enhanced)";
     };
   };
 
   config = mkIf cfg.enable {
     services.xserver.xkb.extraLayouts = {
-      uz-enhanced = {
-        description = "Uzbek (Enhanced)";
-        languages = ["uzb"];
+      uz = {
+        description = "Uzbek (Latin)";
+        languages = ["uzb" "eng"];
         symbolsFile = ./uz;
       };
       uz-enhanced-us = {
@@ -39,8 +39,9 @@ in {
         languages = ["uzb"];
         symbolsFile = ./uz_cyrillic;
       };
+      layout = cfg.layout;
+      variant = "latin";
     };
 
-    services.xserver.xkb.layout = cfg.layout;
   };
 }
