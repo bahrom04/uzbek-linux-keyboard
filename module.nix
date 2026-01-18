@@ -40,7 +40,7 @@ in {
         symbolsFile = ./uz_cyrillic;
       };
     };
-    layout = cfg.layout;
+    layout = "uz,us";
     variant = "latin";
 
   };
