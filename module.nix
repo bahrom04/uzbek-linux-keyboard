@@ -12,30 +12,30 @@ in {
 
     layout = mkOption {
       type = types.str;
-      default = "uz-enhanced,us";
-      description = "Uzbek (Enhanced)";
+      default = "uz,us";
+      description = "Uzbek";
     };
   };
 
   config = mkIf cfg.enable {
     services.xserver.xkb.extraLayouts = {
-      uz-enhanced = {
-        description = "Uzbek (Enhanced)";
+      uz = {
+        description = "Uzbek";
         languages = ["uzb"];
-        symbolsFile = ./uz;
+        symbolsFile = ./uz_latin;
       };
-      uz-enhanced-us = {
-        description = "Uzbek (Enhanced, US)";
+      uz-us = {
+        description = "Uzbek (US)";
         languages = ["uzb"];
         symbolsFile = ./uz_us;
       };
-      uz-enhanced-2023 = {
-        description = "Uzbek (Enhanced, 2023)";
+      uz-2023 = {
+        description = "Uzbek (2023)";
         languages = ["uzb"];
         symbolsFile = ./uz_2023;
       };
-      uz-enhanced-cyrillic = {
-        description = "Uzbek (Enhanced, Cyrillic)";
+      uz-cyrillic = {
+        description = "Uzbek (Cyrillic)";
         languages = ["uzb"];
         symbolsFile = ./uz_cyrillic;
       };
